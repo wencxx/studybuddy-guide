@@ -1,0 +1,16 @@
+{% extends './base.html' %}
+
+{% block content %}
+    <div class="h-fit min-h-[92dvh] flex pt-20 justify-center">
+        <div class="w-3/4 space-y-5">
+            <h1 class="text-2xl font-semibold tracking-wide">Demonstration video</h1>
+            <p class="text-lg">Watch this demonstration video to learn how to use the system! The video provides a step-by-step guide to help you navigate the features and make the most out of the system effectively.</p>
+            <div>
+                <video class="w-full h-[65dvh]" controls>
+                    <source src="{{ url_for('static', filename='videos/videodemo.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+</head>
+<body>
+   <div class="w-screen h-fit min-h-screen bg-gray-200 flex flex-col">
+        <header class="h-[8dvh] border-b flex items-center justify-between px-10 font-Inter">
+            <h1 class="text-blue-600 font-semibold">STUDYBUDDY</h1>
+            <nav>
+                <ul class="flex gap-x-5">
+                    <li>
+                        <a href="{{ url_for('home')}}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('documents')}}">Documents</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('system')}}">System</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('demo')}}">Demo</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="px-10 w-screen">
+            {% block content %}
+            {% endblock %}
+        </div>
+   </div>
+</body>
+</html>

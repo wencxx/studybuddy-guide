@@ -1,0 +1,30 @@
+{% extends './base.html' %}
+
+{% block content %}
+    <div class="h-fit min-h-[92dvh] flex pt-20 justify-center">
+        <div class="w-3/4 space-y-5">
+            <h1 class="text-2xl font-semibold tracking-wide">Capstone System</h1>
+            <p class="text-lg">This section is where users can access the capstone system link, view the user manual, and download the source code.</p>
+            <div class="flex flex-wrap gap-5">
+                <div class="border border-black w-full max-w-52 rounded p-5 space-y-5"> 
+                    <h1 class="uppercase">Capstone System</h1>
+                    <div>
+                        <a href="https://studybuddy-livid.vercel.app/" target="_blank" class="w-fit bg-blue-500 px-3 rounded text-white py-1">Visit</a>
+                    </div>
+                </div>
+                <div class="border border-black w-full max-w-52 rounded p-5 space-y-5"> 
+                    <h1 class="uppercase">User Manual</h1>
+                    <div>
+                        <a href="{{ url_for('static', filename='docs/manual.pdf') }}" target="_blank" class="w-fit bg-blue-500 px-3 rounded text-white py-1">View</a>
+                    </div>
+                </div>
+                <div class="border border-black w-full max-w-52 rounded p-5 space-y-5"> 
+                    <h1 class="uppercase">Download Code</h1>
+                    <div>
+                        <a href="{{ url_for('static', filename='docs/studybuddy.zip') }}" download class="w-fit bg-blue-500 px-3 rounded text-white py-1">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
